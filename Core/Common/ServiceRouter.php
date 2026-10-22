@@ -137,7 +137,6 @@ class Amfphp_Core_Common_ServiceRouter {
      *
      */
     public function executeServiceCall($serviceName, $methodName, array $parameters) {
-        Console::log("$serviceName.$methodName called");
         $unfilteredServiceObject = $this->getServiceObject($serviceName);
         $serviceObject = Amfphp_Core_FilterManager::getInstance()->callFilters(self::FILTER_SERVICE_OBJECT, $unfilteredServiceObject, $serviceName, $methodName, $parameters);
 

@@ -195,7 +195,6 @@ class Amfphp_Core_Amf_Handler implements Amfphp_Core_Common_IDeserializer, Amfph
      * @return Amfphp_Core_Amf_Packet
      */
     public function handleException(Exception $exception) {
-        Console::log($exception);
         $errorPacket = new Amfphp_Core_Amf_Packet();
         $filterManager = Amfphp_Core_FilterManager::getInstance();
         $fromFilters = $filterManager->callFilters(self::FILTER_AMF_EXCEPTION_HANDLER, null);

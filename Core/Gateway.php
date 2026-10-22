@@ -150,7 +150,7 @@ class Amfphp_Core_Gateway {
      * @param String $contentType
      * @param Amfphp_Core_Config $config optional. The default config object will be used if null
      */
-    public function  __construct(array $getData, array $postData, $rawInputData, $contentType, Amfphp_Core_Config $config = null) {
+    public function  __construct(array $getData, array $postData, $rawInputData, $contentType, Amfphp_Core_Config|null $config = null) {
         $this->getData = $getData;
         $this->postData = $postData;
         $this->rawInputData = $rawInputData;
